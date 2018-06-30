@@ -1,0 +1,66 @@
+
+<!--<button id="popoverinfo" type="button" class="btn btn-sm btn-danger"  data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>-->
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>{{dataResponse.sourceCodeData.name}}</h2>
+            <h5>{{dataResponse.sourceCodeData.fullyQualifiedName}}</h5>
+        </div>
+        <div class="col-sm-3">
+            <!--<a id="popoverinfo" id="" data-toggle="popover"-->
+               <!--data-original-title="Title"-->
+               <!--data-content="This is the body of Popover"-->
+               <!--data-placement="right"class="btn btn-primary" data-container="body">pop-->
+            <!--</a>-->
+
+
+            <div id="accordion" class="sticky-top">
+
+                <div ng-repeat="symptom in dataResponse.syndrome">
+                <div class="card bg-light">
+                    <div class="card-header" id="heading{{symptom.id}}" >
+                        <button class="btn btn-link collapsed text-left" data-toggle="collapse" data-target="#collapse{{symptom.id}}" aria-expanded="true" aria-controls="collapse{{symptom.id}}">
+                            <h5>{{symptom.element.name}} ({{symptom.element.type}})</h5>
+                        </button>
+                        <h6 class="card-subtitle mb-2 text-muted">Afetado por {{symptom.type}}
+                            <span data-toggle="popover"  title="Popover title"  data-content="And here's some amazing content. It's very engaging. Right?">{{symptom.value}} </span></h6>
+
+                    </div>
+
+
+                    <div id="collapse{{symptom.id}}" class="collapse" aria-labelledby="heading{{symptom.id}}" data-parent="#accordion">
+
+                        <div class="card-body">
+
+                            <p class="card-text"><b>{{symptom.value}}:</b> {{symptom.description}}</p>
+                            <button ng-if="symptom.element.type=='method'" type="button" class="btn btn-primary"
+                                    ng-click=highlightCode(symptom.element)>Ir ao Método</button>
+
+                        </div>
+
+                        <div class="card-footer">
+                            <h6>Sintomas Relacionados</h6>
+                            <div class="row">
+                            <div ng-repeat="relation in symptom.relation" class="col-sm-{{12/symptom.relation.length}}">
+                                {{relation.type}}
+                                <div ng-repeat="related in relation.relatedSymptoms">
+                                    <button class="btn btn-link" text-muted data-toggle="collapse" data-target="#collapse{{related}}">
+                                        {{(dataResponse.syndrome | filter : {id: related})[0].element.name}}: {{(dataResponse.syndrome | filter : {id: related})[0].value}}
+                                    </button>
+                                    <!--{{$filter('filter')(dataResponse.syndrome, {id: 15 })[0]}}-->
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="codeContainer" class="col-sm-9" >
+            <!--<h3>Popover Example</h3>-->
+            <!--<button type="button" class="btn" data-toggle="popover" title="Popover Header" data-trigger="focus" data-content="Some content inside the popover">Toggle popover</button>-->
+            <pre class="prettyprint linenums"><code>{{dataResponse.sourceCodeData.sourceCode}}</code></pre>
+        </div>
+    </div>
+</div>

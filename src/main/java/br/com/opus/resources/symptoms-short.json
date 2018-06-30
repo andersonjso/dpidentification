@@ -1,0 +1,97 @@
+[
+	{
+		"sourceFile": {
+			"file": "/Users/andersonjso/Downloads/meyer-control/src/main/java/br/com/meyer/App.java",
+			"fullyQualifiedName":"br.com.meyer.repository.APP",
+			"name":"APP"
+		},
+		"syndrome":[
+			{
+				"id":14,
+				"element":{
+					"type":"method",
+					"name":"App.authenticate",
+					"lineStart": 119,
+					"lineEnd": 169
+				},
+				"type":"smell",
+				"value":"Long Method",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+				"relation":[{
+					"type":"agglomeration",
+					"relatedSymptoms":[
+						15
+					]
+				},
+				{
+					"type":"normal",
+					"relatedSymptoms":[
+						16,
+						17
+					]
+				}]
+			},
+			{
+				"id":15,
+				"element":{
+					"type":"class",
+					"name":"APP",
+					"lineStart": 34,
+					"lineEnd": 170
+				},
+				"type":"smell",
+				"value":"God Class",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+				"relation":[{
+					"type":"agglomeration",
+					"relatedSymptoms":[
+						14
+					]
+				},
+				{
+					"type":"normal",
+					"relatedSymptoms":[
+						16
+					]
+				}]
+			},
+			{
+				"id":16,
+				"element":{
+					"type":"class",
+					"name":"APP",
+					"lineStart": 34,
+					"lineEnd": 170
+				},
+				"type":"Princípio de Orientação de Objetos",
+				"value":"Resposabilidade Única",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+				"relation":[{
+					"type":"normal",
+					"relatedSymptoms":[
+						14,
+						15
+					]
+				}]
+			},
+			{
+				"id":17,
+				"element":{
+					"type":"class",
+					"name":"APP",
+					"lineStart": 34,
+					"linend": 170
+				},
+				"type":"Atributo de Qualidade",
+				"value":"Complexidade",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+				"relation":[{
+					"type":"normal",
+					"relatedSymptoms":[
+						14
+					]
+				}]
+			}
+		]
+	}
+]
