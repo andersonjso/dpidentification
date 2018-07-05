@@ -1,5 +1,6 @@
 package br.com.opus;
 
+import br.com.opus.controller.DesignProblemController;
 import br.com.opus.controller.MainController;
 import br.com.opus.controller.SnippetController;
 import br.com.opus.controller.SymptomController;
@@ -22,6 +23,7 @@ public class App extends Jooby {
     use(MainController.class);
     use(SymptomController.class);
     use(SnippetController.class);
+    use(DesignProblemController.class);
   }
 
   public static void main(final String[] args) {

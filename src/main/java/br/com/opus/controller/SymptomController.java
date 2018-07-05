@@ -15,9 +15,6 @@ import org.jooby.mvc.Path;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by andersonjso on 6/29/18.
- */
 public class SymptomController {
 
     SymptomService symptomService = new SymptomService();

@@ -7,9 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-/**
- * Created by andersonjso on 3/13/18.
- */
 public class DocumentDTO {
     private SourceCodeData sourceCodeData;
     private List<Symptom> syndrome;

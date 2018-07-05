@@ -1,29 +1,30 @@
 
 <!--<button id="popoverinfo" type="button" class="btn btn-sm btn-danger"  data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>-->
-<div class="container-fluid" >
+<div class="container" >
     <div class="row">
-        <div class="col-sm-3" style="background-color: coral;">
-            aedsafasdfasdfsfas
-        </div>
-        <div class="col-sm-9" style="background-color: darkolivegreen;">
+        <div class="col-sm-12">
+            <br>
+
+            <h5>Symptoms presented:</h5>
 
             <button type="button" id="smellButton" ng-click="filterSymptom('smell')" class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActivesmell}" ><span class="badge">Code Smells</span></button>
-            <button type="button" ng-click="filterSymptom('object')"class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActiveobject"><span class="badge">Object-Oriented Principles Violations</span></button>
+            <button type="button" ng-click="filterSymptom('object')"class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActiveobject}"><span class="badge">Object-Oriented Principles Violations</span></button>
             <button type="button" ng-click="filterSymptom('architectural')"class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActivearchitectural}"><span class="badge">Architectural and Design Patterns Violations</span></button>
-            <button type="button" ng-click="filterSymptom('nonfunctional')"class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActivenonfunctional"><span class="badge">Non-functional Requirements Violation</span></button>
+            <button type="button" ng-click="filterSymptom('nonfunctional')"class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActivenonfunctional}"><span class="badge">Non-functional Requirements Violation</span></button>
             <button type="button" ng-click="filterSymptom('structural')"class="btn btn-primary btn-sm" ng-class="{'btn-light': !isActivestructural}"><span class="badge">Poor Structural Quality Attributes</span></button>
 
-
+            <hr>
 
             <ul class="list-group">
                 <div ng-repeat="classSC in classes">
-                    <li class="list-group-item">{{classSC.sourceFile.name}}
-                        <button type="button" class="btn btn-outline-danger"><span class="badge">{{classSC.syndrome.length}}</span></button> </li>
+                    <li class="list-group-item"><button class="btn btn-outline-primary" ng-click='go(classSC)'><strong>{{classSC.sourceFile.name}}</strong></button>
+                        <button type="button" class="btn btn-outline-danger">
+                            <span class="badge pull-left">{{classSC.syndrome.length}}</span>
+                        </button>
+                    </li>
                 </div>
-
-                <!--<li class="list-group-item">Deleted <span class="badge">5</span></li>-->
-                <!--<li class="list-group-item">Warnings <span class="badge">3</span></li>-->
             </ul>
+
         </div>
     </div>
 </div>

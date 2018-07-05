@@ -12,6 +12,10 @@ import org.jooby.Upload;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 /**
  * Created by andersonjso on 6/29/18.
@@ -52,6 +56,22 @@ public class SnippetRepository {
         MongoUtils.snippets().save(snippetData);
 
         return snippetData;
+    }
+
+    public List<Snippet> getSnippetsBySymptom(String value) {
+        List<Snippet> snippets = StreamSupport.stream(MongoUtils.snippets().find("{symptom.value: #}", value)
+                .as(Snippet.class).spliterator(), false)
+                .collect(Collectors.toList());
+
+        return snippets;
+    }
+
+    public String retrieveSourceCode(String id) {
+        GridFSDBFile file = gfsSnippet.findOne(new ObjectId(id));
+
+        Scanner scanner = new Scanner(file.getInputStream()).useDelimiter("\\A");
+
+        return scanner.hasNext() ? scanner.next() : "";
     }
 
 

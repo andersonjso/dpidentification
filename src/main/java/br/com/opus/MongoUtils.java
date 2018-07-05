@@ -34,6 +34,7 @@ public class MongoUtils {
     public static MongoCollection snippets (){
         return jongo.getCollection("snippets");
     }
+    public static MongoCollection designProblems() {return jongo.getCollection("designproblems");}
 }
 
 /*

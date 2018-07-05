@@ -17,19 +17,27 @@ public class Symptom {
     private String value;
     private String description;
     private Relation[] relation;
+    private String reason;
 
     public Symptom(@JsonProperty("id") int id,
                    @JsonProperty("element") Element element,
                    @JsonProperty("type") String type,
                    @JsonProperty("value") String value,
                    @JsonProperty("description") String description,
-                   @JsonProperty("relation") Relation[] relation) {
+                   @JsonProperty("relation") Relation[] relation,
+                   @JsonProperty("reason") String reason) {
         this.id = id;
         this.element = element;
         this.type = type;
         this.value = value;
         this.description = description;
         this.relation = relation;
+        this.reason = reason;
+    }
+
+    public Symptom(String type, String value) {
+        this.type = type;
+        this.value = value;
     }
 
     public String getType() {

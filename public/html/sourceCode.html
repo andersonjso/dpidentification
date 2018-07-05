@@ -6,14 +6,7 @@
             <h2>{{dataResponse.sourceCodeData.name}}</h2>
             <h5>{{dataResponse.sourceCodeData.fullyQualifiedName}}</h5>
         </div>
-        <div class="col-sm-3">
-            <!--<a id="popoverinfo" id="" data-toggle="popover"-->
-               <!--data-original-title="Title"-->
-               <!--data-content="This is the body of Popover"-->
-               <!--data-placement="right"class="btn btn-primary" data-container="body">pop-->
-            <!--</a>-->
-
-
+        <div class="col-sm-12">
             <div id="accordion" class="sticky-top">
 
                 <div ng-repeat="symptom in dataResponse.syndrome">
@@ -57,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div id="codeContainer" class="col-sm-9" >
+        <div id="codeContainer" class="col-sm-12" >
             <!--<h3>Popover Example</h3>-->
             <!--<button type="button" class="btn" data-toggle="popover" title="Popover Header" data-trigger="focus" data-content="Some content inside the popover">Toggle popover</button>-->
             <pre class="prettyprint linenums"><code>{{dataResponse.sourceCodeData.sourceCode}}</code></pre>

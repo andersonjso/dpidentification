@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-/**
- * Created by andersonjso on 6/29/18.
- */
 public class SymptomDTO {
 
     private List<Symptom> symptoms;
@@ -18,25 +15,20 @@ public class SymptomDTO {
         this.symptoms = symptoms;
         this.typeSymptom = typeSymptom;
     }
+
+    public List<Symptom> getSymptoms() {
+        return symptoms;
+    }
+
+    public void setSymptoms(List<Symptom> symptoms) {
+        this.symptoms = symptoms;
+    }
+
+    public String getTypeSymptom() {
+        return typeSymptom;
+    }
+
+    public void setTypeSymptom(String typeSymptom) {
+        this.typeSymptom = typeSymptom;
+    }
 }
-
-/*
-private SourceCodeData sourceCodeData;
-    private List<Symptom> syndrome;
-
-    public DocumentDTO (@JsonProperty("sourceCodeData") SourceCodeData sourceCodeData,
-                     @JsonProperty("syndrome") List<Symptom> syndrome){
-        this.sourceCodeData = sourceCodeData;
-        this.syndrome = syndrome;
-    }
-
-    public DocumentDTO(){}
-
-    public void convertDocument(Document document){
-        this.sourceCodeData = new SourceCodeData(document.getSourceFile().getFile(),
-                document.getSourceFile().getFullyQualifiedName(),
-                document.getSourceFile().getName());
-
-        this.syndrome = document.getSyndrome();
-    }
- */

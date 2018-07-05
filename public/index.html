@@ -2,14 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Primeiramente boa tarde</title>
+        <title>COLLIDE</title>
     </head>
 
     <body ng-app="myApp">
 
-        <nav class="navbar sticky-top navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">Design Problem Identification</span>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#!/">Opus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!symptoms">Symptoms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!designproblems">Design Problems</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
         <div ng-view></div>
 
@@ -24,6 +40,12 @@
         <script src = "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js  "></script>
 
         <script src="js/main.js"></script>
+        <script src="js/SourceCodeController.js"></script>
+        <script src="js/DashboardController.js"></script>
+        <script src="js/SymptomController.js"></script>
+        <script src="js/DesignProblemController.js"></script>
+        <script src="js/ClassDPController.js"></script>
+
 
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=java"></script>
 

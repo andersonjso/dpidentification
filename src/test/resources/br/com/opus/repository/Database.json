@@ -1,0 +1,471 @@
+{
+  "classes":[
+    {
+      "sourceFile" : {
+        "file" : "/Users/leonardo/project/DeviceRepository.java",
+        "fullyQualifiedName" : "br.com.meyer.repository.DeviceRepository",
+        "name" : "DeviceRepository"
+      },
+      "syndrome" : [
+        {
+          "id" : 0.0,
+          "element" : {
+            "type" : "METHOD",
+            "name" : "DeviceRepository.fillInReadingOnImport"
+          },
+          "type" : "SMELL",
+          "value" : "Long Parameter List",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                1.0,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                7.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 1.0,
+          "element" : {
+            "type" : "method",
+            "name" : "DeviceRepository.getDeviceReadings"
+          },
+          "type" : "smell",
+          "value" : "Dispersed Coupling",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                0.0,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                8.0,
+                10.0,
+                11.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 2.0,
+          "element" : {
+            "type" : "method",
+            "name" : "DevideRepository.retrieveDeviceReadingReportByClient"
+          },
+          "type" : "smell",
+          "value" : "Long Method",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                0.0,
+                1.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                9.0,
+                10.0,
+                12.0,
+                13.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 3.0,
+          "element" : {
+            "type" : "method",
+            "name" : "DeviceRepository.retrieveDeviceReadingReportByClient"
+          },
+          "type" : "smell",
+          "value" : "Intensive Coupling",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                0.0,
+                1.0,
+                2.0,
+                4.0,
+                5.0,
+                6.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                7.0,
+                8.0,
+                11.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 4.0,
+          "element" : {
+            "type" : "method",
+            "name" : "DeviceRepository.listDevices"
+          },
+          "type" : "smell",
+          "value" : "Message Chain",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                0.0,
+                1.0,
+                2.0,
+                3.0,
+                5.0,
+                6.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                7.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 5.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "smell",
+          "value" : "God Class",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                0.0,
+                1.0,
+                2.0,
+                3.0,
+                4.0,
+                6.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                7.0,
+                8.0,
+                9.0,
+                10.0,
+                12.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 6.0,
+          "element" : {
+            "type" : "method",
+            "name" : "DeviceRepository.retrieveDeviceReadingReportByClient"
+          },
+          "type" : "smell",
+          "value" : "Feature Envy",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                0.0,
+                1.0,
+                2.0,
+                3.0,
+                4.0,
+                5.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                7.0,
+                9.0,
+                10.0,
+                11.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 7.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Requisito Não Funcional",
+          "value" : "Legibilidade",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                0.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                11.0,
+                12.0,
+                13.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 8.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Requisito Não Funcional",
+          "value" : "Reusabilidade",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                0.0,
+                1.0,
+                3.0,
+                5.0,
+                7.0,
+                9.0,
+                11.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 9.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Princípio de Orientação de Objetos",
+          "value" : "Resposabilidade Única",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                2.0,
+                5.0,
+                6.0,
+                8.0,
+                10.0,
+                11.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 10.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Atributo de Qualidade",
+          "value" : "Coesão",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                1.0,
+                2.0,
+                5.0,
+                6.0,
+                8.0,
+                9.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 11.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Atributo de Qualidade",
+          "value" : "Acoplamento",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                1.0,
+                3.0,
+                6.0,
+                7.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 12.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Atributo de Qualidade",
+          "value" : "Tamanho",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                2.0,
+                5.0,
+                7.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 13.0,
+          "element" : {
+            "type" : "class",
+            "name" : "DeviceRepository"
+          },
+          "type" : "Atributo de Qualidade",
+          "value" : "Complexidade",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                2.0,
+                7.0
+              ]
+            }
+          ]
+        }
+      ],
+      "filterSuggestion" : [
+        [
+          "DTO",
+          "Robustez",
+          "Reusabilidade"
+        ]
+      ]
+    },
+    {
+      "sourceFile" : {
+        "file" : "/Users/leonardo/project/APP.java",
+        "fullyQualifiedName" : "br.com.meyer.repository.APP",
+        "name" : "APP"
+      },
+      "syndrome" : [
+        {
+          "id" : 14.0,
+          "element" : {
+            "type" : "method",
+            "name" : "App.authenticate"
+          },
+          "type" : "smell",
+          "value" : "Long Method",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                15.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                16.0,
+                17.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 15.0,
+          "element" : {
+            "type" : "class",
+            "name" : "APP"
+          },
+          "type" : "smell",
+          "value" : "God Class",
+          "relation" : [
+            {
+              "type" : "agglomeration",
+              "relatedSymptoms" : [
+                14.0
+              ]
+            },
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                16.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 16.0,
+          "element" : {
+            "type" : "class",
+            "name" : "APP"
+          },
+          "type" : "Princípio de Orientação de Objetos",
+          "value" : "Resposabilidade Única",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                14.0,
+                15.0
+              ]
+            }
+          ]
+        },
+        {
+          "id" : 17.0,
+          "element" : {
+            "type" : "class",
+            "name" : "APP"
+          },
+          "type" : "Atributo de Qualidade",
+          "value" : "Complexidade",
+          "relation" : [
+            {
+              "type" : "normal",
+              "relatedSymptoms" : [
+                14.0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

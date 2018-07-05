@@ -24,4 +24,8 @@ public class MainService {
 
         return classes;
     }
+
+    public Document getClassDP(String name) {
+        return mainRepository.getClassDP(name);
+    }
 }

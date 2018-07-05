@@ -1,7 +1,6 @@
 package br.com.opus.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.bson.types.ObjectId;
 
 /**
  * Created by andersonjso on 6/29/18.

@@ -17,9 +17,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by andersonjso on 3/12/18.
- */
 public class MainController {
 
     private MainRepository mainRepository = new MainRepository();
@@ -74,6 +71,14 @@ public class MainController {
         List<Document> classes = mainService.listClasses(items);
 
         return Results.json(gson.toJson(classes));
+    }
+
+    @GET
+    @Path("/class/:name")
+    public Result getClass (String name){
+        Document classDP = mainService.getClassDP(name);
+
+        return Results.json(gson.toJson(classDP));
     }
 }
 

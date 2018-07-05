@@ -20,6 +20,12 @@ public class MainRepository {
 
         return classes;
     }
+
+    public Document getClassDP(String name) {
+        Document classDP = MongoUtils.classes().findOne("{sourceFile.name: #}", name).as(Document.class);
+
+        return classDP;
+    }
 }
 
 
